@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Little Waves · New website preview</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Preview of the new Little Waves Surf School website, every page on one screen.">
+<meta property="og:title" content="Little Waves · New website preview">
+<meta property="og:description" content="Every page of the new site, on laptop and phone.">
+<meta property="og:image" content="../img/og-card.jpg">
+<link rel="icon" type="image/png" href="../img/icon-180.png">
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+  body{background:var(--sand)}
+  .mk-top{background:var(--paper);position:relative;overflow:hidden;isolation:isolate;padding:clamp(28px,5vw,56px) 0 clamp(56px,8vw,96px)}
+  .mk-top .sun{--sun-size:min(70vw,520px);--sun-top:-12%;left:78%}
+  .mk-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;position:relative;z-index:2}
+  .mk-head .brand img{width:52px}
+  .mk-seg{display:inline-flex;background:var(--sand);border-radius:999px;padding:4px}
+  .mk-seg button{border:0;background:none;cursor:pointer;font:500 .8rem var(--sans);letter-spacing:.12em;text-transform:uppercase;padding:.55rem 1rem;border-radius:999px;color:var(--night)}
+  .mk-seg button[aria-pressed="true"]{background:var(--night);color:var(--paper)}
+  .mk-title{position:relative;z-index:2;margin-top:clamp(2rem,6vw,4.5rem)}
+  .mk-title h1{max-width:11em}
+  .mk-title h1{font-size:clamp(2.6rem,7vw,5.6rem);line-height:.95}
+  .mk-title p{margin-top:1.1rem;max-width:34em;font-size:clamp(1.02rem,1.5vw,1.2rem);color:var(--ink)}
+  .mk-jump{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.6rem;position:relative;z-index:2}
+  .mk-jump a{display:inline-flex;align-items:center;min-height:42px;padding:.4rem 1rem;border-radius:999px;background:var(--night);color:var(--paper);text-decoration:none;font-weight:500;font-size:.92rem}
+  .mk-jump a:hover{background:var(--teal)}
+
+  .mk-page{padding-block:clamp(3.5rem,7vw,6rem)}
+  .mk-page:nth-of-type(even){background:var(--paper)}
+  .mk-page-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:.8rem 2rem;margin-bottom:clamp(1.6rem,3vw,2.4rem)}
+  .mk-page-head h2{font-size:clamp(2rem,4.4vw,3.4rem)}
+  .mk-page-head p{color:var(--ink-2);max-width:32em;margin-top:.5rem}
+  .mk-open{font-weight:500;text-decoration:underline;text-decoration-color:var(--sun);text-decoration-thickness:2px;text-underline-offset:.3em;white-space:nowrap}
+  .mk-devices{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:clamp(1.5rem,3vw,3rem);align-items:end}
+
+  /* laptop */
+  .laptop{min-width:0}
+  .laptop .screen{background:var(--night);border-radius:14px 14px 4px 4px;padding:10px 10px 12px}
+  .laptop .bar{display:flex;align-items:center;gap:6px;background:#23495a;border-radius:6px 6px 0 0;padding:7px 10px}
+  .laptop .bar i{width:9px;height:9px;border-radius:50%;background:rgba(251,246,236,.35)}
+  .laptop .bar span{margin-left:10px;flex:1;background:rgba(251,246,236,.12);color:var(--on-sea-2);font-size:.72rem;border-radius:4px;padding:3px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .laptop .view{position:relative;aspect-ratio:1440/900;overflow:hidden;background:var(--paper)}
+  .laptop iframe{position:absolute;top:0;left:0;width:1440px;height:900px;border:0;transform-origin:0 0}
+  .laptop .base{height:14px;margin:0 -4%;background:#c9bda6;border-radius:0 0 12px 12px}
+
+  /* phone */
+  .phone{width:300px;justify-self:center}
+  .phone .body{background:var(--night);border-radius:44px;padding:12px;position:relative}
+  .phone .body::before{content:"";position:absolute;top:19px;left:50%;width:80px;height:20px;border-radius:12px;background:#0b2230;transform:translateX(-50%);z-index:2}
+  .phone .view{position:relative;width:276px;height:625px;border-radius:32px;overflow:hidden;background:var(--paper)}
+  .phone iframe{position:absolute;top:28px;left:0;width:390px;height:844px;border:0;transform:scale(.7077);transform-origin:0 0}
+  .dev-label{display:block;text-align:center;margin-top:.8rem;font-weight:500;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2)}
+
+  .mk-foot{padding:3rem 0 4rem;text-align:center;color:var(--ink-2)}
+  .mk-foot p+p{margin-top:.4rem}
+
+  @media (max-width:860px){
+    .mk-devices{grid-template-columns:1fr}
+    .phone{order:-1}
+  }
+  html[lang="en"] [data-es],html[lang="es"] [data-en]{display:none!important}
+</style>
+</head>
+<body>
+<header class="mk-top">
+  <div class="sun" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="mk-head">
+      <span class="brand"><img src="../img/mark-ink-160.png" alt=""><span>Little Waves</span></span>
+      <div class="mk-seg" role="group" aria-label="Language / Idioma">
+        <button type="button" data-set="en" aria-pressed="true">English</button>
+        <button type="button" data-set="es" aria-pressed="false">Español</button>
+      </div>
+    </div>
+    <div class="mk-title">
+      <h1 data-en>Your new website, every page</h1>
+      <h1 data-es>Tu nueva página web, todas las páginas</h1>
+      <p data-en>Hi María! Here is the whole new site on one screen, on a laptop and on a phone. Scroll inside each screen to see the full page, and tap around, everything works. Switch to Español at the top to see the Spanish version.</p>
+      <p data-es>¡Hola María! Aquí está toda la nueva página en una sola pantalla, en computadora y en celular. Desliza dentro de cada pantalla para ver la página completa y toca lo que quieras, todo funciona. Cambia a English arriba para ver la versión en inglés.</p>
+      <nav class="mk-jump" aria-label="Pages">
+        <a href="#p-home"><span data-en>Home</span><span data-es>Inicio</span></a>
+        <a href="#p-lessons"><span data-en>Surf lessons</span><span data-es>Clases de surf</span></a>
+        <a href="#p-kids"><span data-en>Kids</span><span data-es>Niños</span></a>
+        <a href="#p-review"><span data-en>Reviews</span><span data-es>Reseñas</span></a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main id="pages"></main>
+
+<footer class="mk-foot">
+  <p data-en>Preview only. Your current website stays exactly as it is until you say yes.</p>
+  <p data-es>Solo es una vista previa. Tu página actual sigue igual hasta que digas que sí.</p>
+  <p>Coastal CR · Pura vida</p>
+</footer>
+
+<script>
+(function(){
+  var PAGES = [
+    {id:"home", en:["Home","", "The first thing people see: the sun, your name, the lesson photo, prices, photos, reviews and booking."],
+                es:["Inicio","es/", "Lo primero que ve la gente: el sol, tu nombre, la foto de la clase, precios, fotos, reseñas y reservas."]},
+    {id:"lessons", en:["Surf lessons in Jacó","surf-lessons-jaco/", "A page made for Google searches like \"surf lessons Jaco\": how a lesson goes, prices, why Jacó."],
+                   es:["Clases de surf en Jacó","es/clases-de-surf-jaco/", "Una página para búsquedas en Google como \"clases de surf Jacó\": cómo es la clase, precios, por qué Jacó."]},
+    {id:"kids", en:["Kids surf camps","kids-surf-camps/", "For parents: safety first, what's included, and the options for kids."],
+                es:["Surf para niños","es/campamentos-de-surf-ninos/", "Para los papás: seguridad primero, qué incluye y las opciones para niños."]},
+    {id:"review", en:["Review page","review/", "The page your QR code opens after a lesson. Google and Tripadvisor buttons appear once your profiles are ready."],
+                  es:["Página de reseñas","es/resena/", "La página que abre tu código QR después de una clase. Los botones de Google y Tripadvisor aparecen cuando tus perfiles estén listos."]}
+  ];
+  var ROOT = "../", HOST = "littlewavessurf.com/";
+  var main = document.getElementById("pages");
+
+  function build(lang){
+    document.documentElement.lang = lang;
+    main.innerHTML = PAGES.map(function(p){
+      var t = p[lang], url = ROOT + t[1];
+      var open = lang === "es" ? "Abrir la página completa" : "Open full page";
+      var lp = lang === "es" ? "Computadora" : "Laptop", ph = lang === "es" ? "Celular" : "Phone";
+      return '<section class="mk-page" id="p-' + p.id + '"><div class="wrap">' +
+        '<div class="mk-page-head"><div><h2>' + t[0] + '</h2><p>' + t[2] + '</p></div>' +
+        '<a class="mk-open" href="' + url + '" target="_blank" rel="noopener">' + open + ' <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>' +
+        '<div class="mk-devices">' +
+          '<figure class="laptop"><div class="screen"><div class="bar"><i></i><i></i><i></i><span>' + HOST + t[1] + '</span></div>' +
+          '<div class="view"><iframe loading="lazy" title="' + t[0] + ' (' + lp + ')" src="' + url + '"></iframe></div></div><div class="base"></div>' +
+          '<figcaption class="dev-label">' + lp + '</figcaption></figure>' +
+          '<figure class="phone"><div class="body"><div class="view"><iframe loading="lazy" title="' + t[0] + ' (' + ph + ')" src="' + url + '"></iframe></div></div>' +
+          '<figcaption class="dev-label">' + ph + '</figcaption></figure>' +
+        '</div></div></section>';
+    }).join("");
+    document.querySelectorAll("[data-set]").forEach(function(b){ b.setAttribute("aria-pressed", b.getAttribute("data-set") === lang ? "true" : "false"); });
+    fit();
+  }
+  function fit(){
+    document.querySelectorAll(".laptop .view").forEach(function(v){
+      var f = v.querySelector("iframe"); if(f) f.style.transform = "scale(" + (v.clientWidth / 1440) + ")";
+    });
+  }
+  document.querySelectorAll("[data-set]").forEach(function(b){
+    b.addEventListener("click", function(){ build(b.getAttribute("data-set")); });
+  });
+  window.addEventListener("resize", fit);
+  var start = "en";
+  try{ if(/^es/i.test(navigator.language)) start = "es"; }catch(e){}
+  if(location.hash === "#es") start = "es";
+  build(start);
+})();
+</script>
+</body>
+</html>
